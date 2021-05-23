@@ -2,7 +2,7 @@ import requests
 import urllib
 
 from requests.api import get
-
+import pprint
 
 def get_api(url):
     result = requests.get(url)
@@ -17,8 +17,11 @@ def main():
     if request_deta == None:
         return False
     else:
-        print(request_deta["items"][0]["item"]["itemName"])
-    
+        request_deta
+    count=0
+    while count<=3:
+        print(request_deta['Items'][count]['Item']['itemName'],request_deta['Items'][count]['Item']['itemPrice'],"円\n")
+        count=count+1
 
 
 main()
